@@ -33,9 +33,9 @@ const ON_POST_ADDED = gql`
 `;
 
 export const usePost = () => {
-  const { data, error, loading, subscribeToMore } = useQuery(GET_POSTS);
-
   const [description, setDescription] = React.useState("");
+
+  const { data, error, loading, subscribeToMore } = useQuery(GET_POSTS);
 
   const [createPost] = useMutation(CREATE_POST);
 
