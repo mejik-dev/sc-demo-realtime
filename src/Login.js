@@ -43,6 +43,8 @@ const Login = () => {
     <div>
       <form onSubmit={handleRegister}>
         <h2>Login</h2>
+        <p>email : usera@gmail.com, userb@gmail.com,</p>
+        <p>ps : 123456</p>
         <div className="form-group">
           <label>Email</label>
           <input
