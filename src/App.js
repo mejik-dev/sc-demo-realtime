@@ -1,17 +1,17 @@
-import './App.css';
-import PostPage from './PostPage';
-import { Route, Routes } from 'react-router-dom';
-import Login from './Login';
+import "./App.css";
 
-function App() {
+import * as React from "react";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import PostPage from "./pages/PostPage";
+
+const App = () => {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<PostPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<PostPage />} />
+    </Routes>
   );
-}
+};
 
 export default App;
