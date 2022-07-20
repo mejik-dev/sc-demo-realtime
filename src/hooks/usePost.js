@@ -67,6 +67,9 @@ export const usePost = () => {
       });
     } catch (error) {
       console.log(error);
+    } finally {
+      e.target.reset();
+      setDescription("");
     }
   };
 

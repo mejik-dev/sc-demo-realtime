@@ -12,3 +12,10 @@
 .form input {
   margin-bottom: 0.5rem;
 }
+
+.form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20vw;
+}

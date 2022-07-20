@@ -1,8 +1,10 @@
 import * as React from "react";
 
+import { useLogout } from "../hooks/useLogout";
 import { usePost } from "../hooks/usePost";
 
 const PostPage = () => {
+  const { handleLogout } = useLogout();
   const { error, loading, posts, handleSubmit, setDescription } = usePost();
 
   return (
@@ -14,7 +16,10 @@ const PostPage = () => {
             placeholder="What's on your mind?"
           />
         </div>
-        <button type="submit">Submit</button>
+        <div className="form-actions">
+          <button type="submit">Post</button>
+          <button onClick={handleLogout}>Logout</button>
+        </div>
       </form>
       <hr />
       <h2>Feeds</h2>
@@ -32,7 +37,7 @@ const PostPage = () => {
                     <p>
                       {post.description || "Empty post"}{" "}
                       <span style={{ fontSize: "0.8rem" }}>
-                        (Created by: {post.createdBy.email})
+                        (posted by: {post.createdBy.email})
                       </span>
                     </p>
                   </li>
