@@ -17,7 +17,6 @@ import { SubscriptionClient } from "subscriptions-transport-ws";
 import { BrowserRouter } from "react-router-dom";
 
 const token = localStorage.getItem("token");
-
 const httpLink = new HttpLink({
   uri: "https://dev-pocfordemolm81l.microgen.id/graphql",
 });
